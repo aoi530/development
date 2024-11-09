@@ -276,7 +276,7 @@ header {
 }
 
 /*== フォーム全体 PHP対応 ==*/
-.searchandfilter {
+.searchandfilter,#form {
     width: 280px;
     height: 30px;
     border: solid 2px #FEFAFA;
@@ -288,22 +288,22 @@ header {
     z-index: 50;
 }
 
-.open .searchandfilter {
+.open .searchandfilter,.open #form {
     opacity: 1;
 }
 
-.searchandfilter ul {
+.searchandfilter ul,#form ul {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
 /*== 入力フォーム PHP対応 ==*/
-.searchandfilter li:first-of-type {
+.searchandfilter li:first-of-type,#form li:first-of-type {
     width: 230px;
 }
 
-.searchandfilter li input:first-of-type {
+.searchandfilter li input:first-of-type,#form li input:first-of-type {
     color: #FEFAFA;
     width: 100%;
     padding: 0 15px;
@@ -314,7 +314,7 @@ header {
 }
 
 /*== 検索ボタン PHP対応 ==*/
-.searchandfilter li:last-child {
+.searchandfilter li:last-child,#form li:last-child {
     width: 50px;
     height: 27px;
     position: relative;
@@ -324,7 +324,7 @@ header {
     cursor: pointer;
 }
 
-.searchandfilter li:last-child::before {
+.searchandfilter li:last-child::before,#form li:last-child::before {
     content: "\f002";
     /* 虫メガネマーク */
     font-family: 'FontAwesome';
@@ -334,11 +334,11 @@ header {
     right: 15px;
 }
 
-.searchandfilter li:last-child:hover {
+.searchandfilter li:last-child:hover,#form li:last-child:hover {
     background: #7A0606;
 }
 
-.searchandfilter li input:last-of-type {
+.searchandfilter li input:last-of-type,#form li input:last-of-type {
     background: transparent;
     border-radius: initial;
     border: none;
@@ -524,6 +524,10 @@ h2 {
     margin-top: -10px;
 }
 
+.active-area h2 {
+    opacity: 0;
+}
+
 /* レスポンシブ */
 @media (max-width: 940px) {
     h2 {
@@ -541,7 +545,7 @@ h2 a {
 }
 
 /*== side-bar フォーム全体 PHP対応 ==*/
-.side-bar-top .searchandfilter {
+.side-bar-top .searchandfilter,#form2 {
     border: solid 2px #FEFAFA;
     width: 90%;
     height: 30px;
@@ -555,22 +559,22 @@ h2 a {
 /* レスポンシブ */
 @media (max-width:940px) {
     /* レスポンシブのマスク時の検索フォームの大きさ */
-    .open .side-bar-top .searchandfilter {
+    .open .side-bar-top .searchandfilter,.open #form2 {
         width: 270px;
     }
 }
 
-.side-bar-top .searchandfilter ul {
+.side-bar-top .searchandfilter ul,#form2 ul {
     display: flex;
     justify-content: space-between;
 }
 
 /*== side-bar 入力フォーム PHP対応 ==*/
-.side-bar-top .searchandfilter li:first-of-type {
+.side-bar-top .searchandfilter li:first-of-type,#form2 li:first-of-type {
     width: calc(100% - 50px);
 }
 
-.side-bar-top .searchandfilter li input:first-of-type {
+.side-bar-top .searchandfilter li input:first-of-type,#form2 li input:first-of-type {
     color: #FEFAFA;
     padding: 0 15px;
     border-radius: initial;
@@ -580,13 +584,13 @@ h2 a {
 }
 
 /*== side-bar 検索ボタン PHP対応 ==*/
-.side-bar-top .searchandfilter li:last-child {
+.side-bar-top .searchandfilter li:last-child,#form2 li:last-child {
     width: 50px;
     height: 27px;
     position: relative;
 }
 
-.side-bar-top .searchandfilter li:last-child::before {
+.side-bar-top .searchandfilter li:last-child::before,#form2 li:last-child::before {
     content: "\f002";
     /* 虫メガネマーク */
     font-family: 'FontAwesome';
@@ -596,11 +600,11 @@ h2 a {
     right: 15px;
 }
 
-.side-bar-top .searchandfilter li:last-child:hover {
+.side-bar-top .searchandfilter li:last-child:hover,#form2 li:last-child:hover {
     background: #7A0606;
 }
 
-.side-bar-top .searchandfilter li input:last-of-type {
+.side-bar-top .searchandfilter li input:last-of-type,#form2 li input:last-of-type {
     background: transparent;
     border-radius: initial;
     border: none;
