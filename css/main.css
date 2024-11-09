@@ -189,11 +189,11 @@ header {
     }
 
     /* レスポンシブのマスク時、ロゴを左下に移動させる */
-    .open .active .logo {
+/*     .open .active .logo {
         opacity: 1;
         margin-top: 50px;
         margin-left: -30px;
-    }
+    } */
 }
 
 .logo a {
