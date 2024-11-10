@@ -939,25 +939,11 @@ footer p {
     padding-bottom: 10px;
 }
 
-/*== .page footer ==*/
-/* .page {
-    width: 100%;
-    padding-left: 25%;
-}
-
-.page p {
-    text-align: center;
-} */
-
 /* レスポンシブ */
 @media (max-width:940px) {
     footer {
         padding-left: 15%;
-    }
-    
-    /* .page {
-        padding-left: 15%;
-    } */
+    }   
 }
 
 /*====================================
