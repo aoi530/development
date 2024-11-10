@@ -88,69 +88,63 @@
                     wp_reset_query();
                     ?>
                 </div>
-        </div>
-        </article>
-        <article id="earrings">
-            <h3 class="fade_in"><a href="<?php echo esc_url(home_url('/earrings')); ?>">Earrings</a></h3>
-            <div class="grid">
-            <?php
-                $args = [
-                    'category_name' => 'earrings',
-                    'posts_per_page' => 6,
-                ];
-                ?>
-                <?php
-                $earrings_pages = new WP_Query($args);
+            </article>
+            <article id="earrings">
+                <h3 class="fade_in"><a href="<?php echo esc_url(home_url('/earrings')); ?>">Earrings</a></h3>
+                <div class="grid">
+                    <?php
+                    $args = [
+                        'category_name' => 'earrings',
+                        'posts_per_page' => 6,
+                    ];
+                    ?>
+                    <?php
+                    $earrings_pages = new WP_Query($args);
 
-                while ($earrings_pages->have_posts()) :
-                    $earrings_pages->the_post();
-                ?>
-                    <div class="item fade_in">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail(null, array('class' => 'post-thumb')); ?></a>
-                        <div class="item-content">
-                            <a href="<?php the_permalink(); ?>" class="price"><?php the_title(); ?></a>
-                            <a href="<?php the_permalink(); ?>" class="material"><?php the_excerpt(); ?></a>
+                    while ($earrings_pages->have_posts()) :
+                        $earrings_pages->the_post();
+                    ?>
+                        <div class="item fade_in">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(null, array('class' => 'post-thumb')); ?></a>
+                            <div class="item-content">
+                                <a href="<?php the_permalink(); ?>" class="price"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>" class="material"><?php the_excerpt(); ?></a>
+                            </div>
                         </div>
-                    </div>
-                <?php endwhile;
-                wp_reset_query();
-                ?>
-            </div>
-        </article>
-        <article id="bracelet">
-            <h3 class="fade_in"><a href="<?php esc_url(home_url('/bracelet')); ?>">Bracelet</a></h3>
-            <div class="grid">
-            <?php
-                $args = [
-                    'category_name' => 'bracelet',
-                    'posts_per_page' => 6,
-                ];
-                ?>
-                <?php
-                $bracelet_pages = new WP_Query($args);
-
-                while ($bracelet_pages->have_posts()) :
-                    $bracelet_pages->the_post();
-                ?>
-                    <div class="item fade_in">
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail(null, array('class' => 'post-thumb')); ?></a>
-                        <div class="item-content">
-                            <a href="<?php the_permalink(); ?>" class="price"><?php the_title(); ?></a>
-                            <a href="<?php the_permalink(); ?>" class="material"><?php the_excerpt(); ?></a>
-                        </div>
-                    </div>
-                <?php endwhile;
-                wp_reset_query();
-                ?>
+                    <?php endwhile;
+                    wp_reset_query();
+                    ?>
                 </div>
-            </div>
-        </article>
-        <footer>
-            <p>©DEVELOPMENT</p>
-        </footer>
+            </article>
+            <article id="bracelet">
+                <h3 class="fade_in"><a href="<?php esc_url(home_url('/bracelet')); ?>">Bracelet</a></h3>
+                <div class="grid">
+                    <?php
+                    $args = [
+                        'category_name' => 'bracelet',
+                        'posts_per_page' => 6,
+                    ];
+                    ?>
+                    <?php
+                    $bracelet_pages = new WP_Query($args);
+                    while ($bracelet_pages->have_posts()) :
+                        $bracelet_pages->the_post();
+                    ?>
+                        <div class="item fade_in">
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_post_thumbnail(null, array('class' => 'post-thumb')); ?></a>
+                            <div class="item-content">
+                                <a href="<?php the_permalink(); ?>" class="price"><?php the_title(); ?></a>
+                                <a href="<?php the_permalink(); ?>" class="material"><?php the_excerpt(); ?></a>
+                            </div>
+                        </div>
+                    <?php endwhile;
+                    wp_reset_query();
+                    ?>
+                </div>
+            </article>
         </div>
     </section>
 </main>
-<?php get_footer("top"); ?>
+<?php get_footer(); ?>

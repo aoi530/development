@@ -32,4 +32,4 @@
         <?php endif; ?>
     </section>
 </main>
-<?php get_footer("page"); ?>
+<?php get_footer(); ?>
