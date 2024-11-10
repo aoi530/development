@@ -981,6 +981,28 @@ footer p {
     grid-area: 2 / 3 / 3 / 4;
 }
 
+@media (max-width:940px) {
+    .item-img {
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(5,1fr);
+    }
+
+    /* 上 */
+    .single_main_thumb:nth-of-type(1),.box1 {
+        grid-area: 1 / 1 / 4 / 7;
+    }
+
+    /* 左下 */
+    .single_main_thumb:nth-of-type(2),.box2 {
+        grid-area: 4 / 1 / 6 / 4;
+    }
+
+    /* 右下 */
+    .single_main_thumb:nth-of-type(3),.box3 {
+        grid-area: 4 / 4 / 6 / 7;
+    }
+}
+
 /*== 商品説明 ==*/
 .item-title {
     display: flex;
