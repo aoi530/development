@@ -695,7 +695,7 @@ h2 a {
 
 /* レスポンシブ */
 @media (max-width: 940px) {
-    .products {
+    .products,.content {
         width: 85%;
         padding-inline: 5%;
     }
